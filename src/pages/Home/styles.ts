@@ -14,8 +14,12 @@ export const HomeContainer = styled.main`
     gap: 3.5rem;
     padding: 4rem;
 
+    background: linear-gradient(
+      0deg,
+      rgba(251, 57, 103, 1) 0%,
+      rgba(254, 88, 70, 1) 100%
+    );
     border-radius: 8px;
-    border: 1px solid ${(props) => props.theme['green-300']};
   }
 `
 
@@ -27,7 +31,7 @@ export const FormContainer = styled.div`
   flex-wrap: wrap;
   gap: 0.5rem;
 
-  color: ${(props) => props.theme['gray-100']};
+  color: #fff;
   font-size: 1.125rem;
   font-weight: bold;
 `
@@ -36,11 +40,11 @@ const BaseInput = styled.input`
   background: transparent;
   height: 2.5rem;
   border: 0;
-  border-bottom: 2px solid ${(props) => props.theme['gray-500']};
+  border-bottom: 2px solid ${(props) => props.theme['gray-700']};
   font-weight: bold;
   font-size: 1.125rem;
   padding: 0 0.5rem;
-  color: ${(props) => props.theme['gray-100']};
+  color: ${(props) => props.theme['gray-800']};
 
   &:focus {
     box-shadow: none;
@@ -48,12 +52,16 @@ const BaseInput = styled.input`
   }
 
   ::placeholder {
-    color: ${(props) => props.theme['gray-500']};
+    color: ${(props) => props.theme['gray-300']};
   }
 `
 
 export const TaskInput = styled(BaseInput)`
   flex: 1;
+
+  &::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
 `
 
 export const MinutesAmountInput = styled(BaseInput)`
@@ -64,13 +72,13 @@ export const CountdownContainer = styled.div`
   font-family: 'Roboto Mono', sans-serif;
   font-size: 10rem;
   line-height: 8rem;
-  color: ${(props) => props.theme['gray-100']};
+  color: #fff;
 
   display: flex;
   gap: 1rem;
 
   span {
-    background: ${(props) => props.theme['gray-700']};
+    background: ${(props) => props.theme['gray-800']};
     padding: 2rem 1rem;
     border-radius: 8px;
   }
@@ -78,7 +86,7 @@ export const CountdownContainer = styled.div`
 
 export const Separator = styled.div`
   padding: 2rem 0;
-  color: ${(props) => props.theme['green-300']};
+  color: ${(props) => props.theme['gray-800']};
 
   width: 4rem;
   overflow: hidden;
@@ -102,15 +110,15 @@ export const StartCountdownButton = styled.button`
 
   cursor: pointer;
 
-  background: ${(props) => props.theme['purple-100']};
-  color: ${(props) => props.theme['gray-100']};
+  background: ${(props) => props.theme['green-300']};
+  color: ${(props) => props.theme['gray-500']};
 
   &:disabled {
-    opacity: 0.7;
+    background: ${(props) => props.theme['gray-300']};
     cursor: not-allowed;
   }
 
   &:not(:disabled):hover {
-    background: ${(props) => props.theme['purple-300']};
+    background: ${(props) => props.theme['green-400']};
   }
 `

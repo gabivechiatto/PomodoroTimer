@@ -7,6 +7,7 @@ export function Header() {
   return (
     <HeaderContainer>
       <img src={Logo} alt="" width="80" />
+      <h1>Pomodoro Timer</h1>
       <nav>
         <NavLink to="/" title="Timer">
           <Timer size={30} />
