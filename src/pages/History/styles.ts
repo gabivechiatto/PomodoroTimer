@@ -26,9 +26,14 @@ export const HistoryList = styled.div`
       background-color: ${(props) => props.theme['gray-600']};
       padding: 1rem;
       text-align: left;
-      color: ${(props) => props.theme['gray-100']};
-      font-size: 0.875rem;
+      color: ${(props) => props.theme['gray-800']};
+      font-size: 1.1rem;
       line-height: 1.6;
+      background: linear-gradient(
+        0deg,
+        rgba(251, 57, 103, 1) 0%,
+        rgba(254, 88, 70, 1) 100%
+      );
 
       &:first-child {
         border-top-left-radius: 8px;

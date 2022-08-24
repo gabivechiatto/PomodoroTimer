@@ -13,12 +13,6 @@ export const HomeContainer = styled.main`
     align-items: center;
     gap: 3.5rem;
     padding: 4rem;
-
-    background: linear-gradient(
-      0deg,
-      rgba(251, 57, 103, 1) 0%,
-      rgba(254, 88, 70, 1) 100%
-    );
     border-radius: 8px;
   }
 `
@@ -44,7 +38,7 @@ const BaseInput = styled.input`
   font-weight: bold;
   font-size: 1.125rem;
   padding: 0 0.5rem;
-  color: ${(props) => props.theme['gray-800']};
+  color: #fff;
 
   &:focus {
     box-shadow: none;
@@ -78,7 +72,11 @@ export const CountdownContainer = styled.div`
   gap: 1rem;
 
   span {
-    background: ${(props) => props.theme['gray-800']};
+    background: linear-gradient(
+      0deg,
+      rgba(251, 57, 103, 1) 0%,
+      rgba(254, 88, 70, 1) 100%
+    );
     padding: 2rem 1rem;
     border-radius: 8px;
   }
@@ -86,7 +84,7 @@ export const CountdownContainer = styled.div`
 
 export const Separator = styled.div`
   padding: 2rem 0;
-  color: ${(props) => props.theme['gray-800']};
+  color: #fff;
 
   width: 4rem;
   overflow: hidden;
@@ -111,7 +109,7 @@ export const StartCountdownButton = styled.button`
   cursor: pointer;
 
   background: ${(props) => props.theme['green-300']};
-  color: ${(props) => props.theme['gray-500']};
+  color: ${(props) => props.theme['gray-800']};
 
   &:disabled {
     background: ${(props) => props.theme['gray-300']};
